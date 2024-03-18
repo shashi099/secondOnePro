@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Second One</title>
+</head>
+<body>
+    <div id="main">
+
+        <div id="upper">
+            <div id="nav">
+                <button id="btn1" >O</button>
+                <button id="btn2" >Menu</button>
+            </div>
+            <div id="heading">
+                <h1>Bent Lindberg <br> Digital Designer</h1>
+            </div>
+            <div id="about">
+                <span>(Berlin , Germany)</span>
+                <span> <i class="ri-arrow-right-down-line"></i> Scroll Down</span>
+            </div>
+        </div>
+        <div id="image">
+        </div>
+
+        <div id="info">
+            <h2>
+                As a digital designer, I focus on producing top-notch and impactful digital experiences. 
+            </h2>
+                        
+            <div id="some-info">
+                <div id="text">
+                    <span>(About Me)</span>
+                </div>
+                <div id="icon">
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-twitter-fill"></i>
+                    <i class="ri-account-circle-line"></i>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <Script>
+        const randomColor = function(){
+            let s = '0123456789ABCDEF';
+            let color = "#";
+            for(let i=0; i<6; i++){
+                color+= s[Math.ceil(Math.random()*14)]
+            }
+            return color
+        }
+        console.log(randomColor());
+
+        const Menu = document.querySelector("#btn2")
+        Menu.addEventListener('click' , function(){
+            Menu.style.backgroundColor = randomColor();
+            Menu.style.color = "blue";
+        })
+    </Script>
+</body>
+</html>
